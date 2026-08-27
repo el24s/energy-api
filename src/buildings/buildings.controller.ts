@@ -1,5 +1,6 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Body, Post } from '@nestjs/common';
 import { BuildingsService } from './buildings.service';
+import { BuildingsDto } from './dto/create-building.dto';
 
 @Controller('buildings')
 export class BuildingsController {
@@ -7,8 +8,15 @@ export class BuildingsController {
         private readonly service : BuildingsService,
     ){}
 
-    @Get('/:id')
-    findById(@Param('id') id : string) {
-        return this.service.findOne(id);
+    @Get()
+    findAll() {
+        return this.service.findAll();
     } 
+
+    @Post()
+    create(@Body() dto : BuildingsDto) {
+        // const building = dto.name, dto.address, dto.yearBuilt;
+        //this.service.create(building); //pas de bd
+        // return building;
+    }
 }

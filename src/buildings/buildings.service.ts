@@ -1,12 +1,20 @@
 import { Injectable } from '@nestjs/common';
+import { Building } from './entities/building.entity';
+import { BuildingsDto } from './dto/create-building.dto';
+
 
 @Injectable()
 export class BuildingsService {
+    buildings : Building[];
 
+    findAll() {
+        return this.findAll();  
+    }
 
-    findOne(id: string) {
-        if (!id) {
-            return this.findOne(id);
-        }
+    create(name: string, address: string, yearBuilt: number) {
+        const build = new Building(0, name, address, yearBuilt)
+        this.buildings.push(build);
     }
 }
+
+// variable qui augmente en haut stv avec l'id 

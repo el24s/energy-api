@@ -70,6 +70,11 @@ $ mau deploy
 
 To optimize and prevents bug orother problem for your current users you can use the versionning tools to be able to...
 
+pour pouvoir utiliser PartialType pour le updateDTO
+```bash
+$ $ npm install --save @nestjs/typeorm typeorm mysql
+```
+
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
 ## Resources

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Building } from './entities/building.entity';
-import { BuildingsDto } from './dto/create-building.dto';
+import { CreateBuildingDto } from './dto/create-building.dto';
 
 
 @Injectable()
@@ -12,7 +12,7 @@ export class BuildingsService {
     }
 
     create(name: string, address: string, yearBuilt: number) {
-        const build = new Building(0, name, address, yearBuilt)
+        const build = new Building(name, address, yearBuilt)
         this.buildings.push(build);
     }
 }

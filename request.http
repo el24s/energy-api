@@ -1,0 +1,21 @@
+# 
+
+### test 
+GET http://localhost:3000/api/buildings
+
+##
+POST http://localhost:3000/api/buildings
+Content-Type: application/json
+{
+  "id": 1,
+  "name": "Pavillon principal",
+  "address": "7000, rue Marie-Victorin",
+  "yearBuilt": 2005
+}
+
+GET http://localhost:3000/
+GET http://localhost:3000/
+
+GET http://localhost:3000/
+GET http://localhost:3000/
+GET http://localhost:3000/

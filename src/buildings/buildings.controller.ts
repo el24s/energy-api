@@ -15,8 +15,6 @@ export class BuildingsController {
 
     @Post()
     create(@Body() dto : BuildingsDto) {
-        // const building = dto.name, dto.address, dto.yearBuilt;
-        //this.service.create(building); //pas de bd
-        // return building;
+        return this.service.create(dto.name, dto.address, dto.yearBuilt);
     }
 }

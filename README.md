@@ -68,7 +68,7 @@ $ npm install -g @nestjs/mau
 $ mau deploy
 ```
 
-To optimize
+To optimize and prevents bug orother problem for your current users you can use the versionning tools to be able to...
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 

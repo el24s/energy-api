@@ -68,7 +68,7 @@ $ npm install -g @nestjs/mau
 $ mau deploy
 ```
 
-To optimize and prevents bug orother problem for your current users you can use the versionning tools to be able to...
+To optimize and be as organized as possible we integrated a versionning tools to be able to differentiate the improvement and the default in each version and then be able to ......
 
 pour pouvoir utiliser PartialType pour le updateDTO
 ```bash

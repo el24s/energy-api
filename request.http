@@ -1,10 +1,10 @@
 # 
 
 ### test 
-GET http://localhost:3000/api/buildings
+GET http://localhost:3000/api/v1/buildings
 
 ##
-POST http://localhost:3000/api/buildings
+POST http://localhost:3000/v1/api/buildings
 Content-Type: application/json
 {
   "id": 1,
@@ -13,7 +13,7 @@ Content-Type: application/json
   "yearBuilt": 2005
 }
 
-GET http://localhost:3000/
+GET http://localhost:3000/api/v1
 GET http://localhost:3000/
 
 GET http://localhost:3000/

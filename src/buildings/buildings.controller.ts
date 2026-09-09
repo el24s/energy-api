@@ -12,11 +12,32 @@ export class BuildingsController {
         private readonly service : BuildingsService,
     ){}
     
-    @ApiOperation({
-    summary: 'Créer un bâtiment',
-    description: 'Ajoute un bâtiment à la collection courante.',
-    })
 
+    @ApiOperation({
+    summary: 'Rechercher tous les bâtiments',
+    description: 'Recherche tous les bâtiments dans la collection courante.',
+    })
+    @ApiCreatedResponse ({
+        description: 'Bâtiments trouvés.',
+        type: Building,
+        headers: {
+            Location: {
+                description: 'URI de la nouvelle ressource',
+                schema: { type: 'string'},
+            },
+        },
+    })
+    @Get()
+    findAll() {
+        return this.service.findAll();
+    } 
+
+
+    @Post()
+    @ApiOperation({
+        summary: 'Créer un bâtiment',
+        description: 'Ajoute un bâtiment à la collection courante.',
+    })
     @ApiCreatedResponse ({
         description: 'Bâtiment créé.',
         type: Building,
@@ -27,18 +48,9 @@ export class BuildingsController {
             },
         },
     })
-
-    
-    @Get()
-    findAll() {
-        return this.service.findAll();
-    } 
-
-    @Post()
-    @ApiOperation({
-
-    })
     create(@Body() dto : CreateBuildingDto) {
         return this.service.create(dto.name, dto.address, dto.yearBuilt);
     }
+
+
 }

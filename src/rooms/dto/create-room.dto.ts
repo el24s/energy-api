@@ -12,7 +12,7 @@ export class CreateRoomDto {
     @ApiProperty({
         description: "L'identifiant du bâtiment",
         example: '04',
-        MaxLength: 2
+        maxLength: 2
     })
     buildingId!: string;
 

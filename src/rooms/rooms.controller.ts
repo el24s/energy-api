@@ -22,7 +22,7 @@ export class RoomsController {
   })
   @ApiCreatedResponse ({
       description: 'Locaux trouvés.',
-      type: Rooms,
+      type: Room,
       headers: {
           Location: {
               description: 'URI de la nouvelle ressource',

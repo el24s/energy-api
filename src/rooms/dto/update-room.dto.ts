@@ -4,7 +4,7 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class UpdateRoomDto extends PartialType(CreateRoomDto) {
  @ApiProperty({
-    description:"",
+    description:"L'étage",
     example: 1,
     minimum: -5,
     maximum: 100,

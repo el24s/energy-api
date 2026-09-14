@@ -43,8 +43,25 @@ site vente en ligne = mango
 # plus lent pour les gros volume, pas de jointure complexe.
 # requees multitables complexes selon le cas d'usage .
 #        elle est puissante et rapide grâce a son modele de document et sa scalabilité, alors il faut comprendre ses limites pour s'assurer de deaddddddd !!!!!!!! lolllllll
+-----------------------------
+14-09-2026
+
+# interface graphique = compass
 
 - commandes
 # mongosh -u "saintfirminell" -p "6309487" --authenticationDatabase "dev_saintfirminell" mongodb://10.10.0.100:27017/dev_saintfirminell
-
+# show dbs = montrer les db dispos
 # cls = clear
+# db.createCollection()
+# db.utilisateurs.insertOne({
+
+# })
+# .insertMany([
+# {"":""}, {}
+# ])
+
+# .find({"age": {"$gt:25"}})
+# { "$set": {"age" : 2788}}
+# .updateMany({}, {"$inc": {"age" : 10}})
+# createIndex  = amélioration perf
+# 

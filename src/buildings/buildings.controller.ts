@@ -28,7 +28,7 @@ export class BuildingsController {
         },
     })
     @Get()
-    findAll() {
+    async findAll() {
         return this.service.findAll();
     } 
 
@@ -48,7 +48,7 @@ export class BuildingsController {
             },
         },
     })
-    create(@Body() dto : CreateBuildingDto) {
+    async create(@Body() dto : CreateBuildingDto) {
         return this.service.create(dto.name, dto.address, dto.yearBuilt);
     }
 

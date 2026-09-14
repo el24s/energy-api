@@ -64,4 +64,15 @@ site vente en ligne = mango
 # { "$set": {"age" : 2788}}
 # .updateMany({}, {"$inc": {"age" : 10}})
 # createIndex  = amélioration perf
-# 
+# .aggregate([])
+
+--
+# npm i joi
+# npm i @nestjs/config
+# npm i @nestjs/mongoose
+
+# joi pour les validations
+
+# gotta put database ip address because we tryna connect to it not me  -> .env
+# double validation not null (bd) & require (class validator) 
+# enregistrer le schema dans les modules = buildingschema

@@ -16,6 +16,11 @@ export class Building extends Document {
     @Prop({ required: true })
     yearBuilt!: number;
 
+    @Prop({ default: () => new Date()})
+    createdAt: Date;
+
+    @Prop({ default: () => new Date()})
+    updatedAt: Date;
 }
 
 export const BuildingSchema = SchemaFactory.createForClass(Building);

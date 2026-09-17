@@ -70,6 +70,7 @@ site vente en ligne = mango
 # npm i joi
 # npm i @nestjs/config
 # npm i @nestjs/mongoose
+# npm i class-validator class-transformer
 
 # joi pour les validations
 
@@ -81,3 +82,5 @@ site vente en ligne = mango
 - mongodb != typeOrm
 - penser aux requetes avant la conception
 - référence si pas encore idée sur les types de requetres quon va faire -> au sinon imbriquée
+
+- mettre dans configApp pour que ça exécute avant la doc swagger

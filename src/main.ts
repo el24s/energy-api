@@ -10,11 +10,7 @@ async function bootstrap() {
   
   // rajouter le préfix /api devant toutes les routes
   app.setGlobalPrefix('api');
-  app.enableVersioning({
-    type: VersioningType.URI,
-    defaultVersion: '1',
-  });
-  
+
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
@@ -23,6 +19,12 @@ async function bootstrap() {
       stopAtFirstError: false,
     }),
   );
+  app.enableVersioning({
+    type: VersioningType.URI,
+    defaultVersion: '1',
+  });
+  
+  
   configureSwagger(app);
   await app.listen(process.env.PORT ?? 3000);
 }

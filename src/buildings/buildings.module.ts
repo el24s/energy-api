@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { BuildingsController } from './buildings.controller';
 import { BuildingsService } from './buildings.service';
-import { BuildingSchema, Building } from './schemas/building.schema';
+import { BuildingSchema, Building } from './schemas/buildings.schema';
 // import { Building } from './entities/building.entity';
 import { MongooseModule } from '@nestjs/mongoose';
 

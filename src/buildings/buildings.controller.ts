@@ -2,7 +2,7 @@ import { Controller, Get, Param, Body, Post } from '@nestjs/common';
 import { BuildingsService } from './buildings.service';
 import { CreateBuildingDto } from './dto/create-building.dto';
 import { ApiCreatedResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
-import { Building } from './entities/building.entity';
+import { Building } from './entities/buildings.entity';
 
 @ApiTags('Buildings')
 @Controller({path:'buildings', version: '1'})

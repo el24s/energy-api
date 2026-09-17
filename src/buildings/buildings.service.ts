@@ -1,9 +1,11 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { Building } from './entities/building.entity';
+import { Building } from './entities/buildings.entity';
 import { CreateBuildingDto } from './dto/create-building.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { UpdateBuildingDto } from './dto/update-building.dto';
+import { Repository } from 'typeorm';
+import { BuildingsRepository } from './buildings.repository';
 
 
 @Injectable()
@@ -12,6 +14,7 @@ export class BuildingsService {
     // Injecter Model à l'aide de InjectModel dans le constructeur de BuildingService
     constructor (
         @InjectModel(Building.name) private readonly buildingModel: Model<Building>,
+        private readonly buildingsRepository: Repository<BuildingsRepository>,
     ){}
 
     async findAll(): Promise<Building[]> {
@@ -40,9 +43,12 @@ export class BuildingsService {
         return this.buildingModel.findByIdAndUpdate(id, updateBuildingDto, {new: true}).exec();
     }
 
-    async remove(id:string) {
-        const deletedBuilding = await this.buildingModel.delete
-        const index: number = this.findBuildingIndex(id);
+    async remove(id:string): (Promise<Building> || null) {
+        const deletedBuilding = await this.buildingsRepository.removeAll(id);
+
+        if(!deletedBuilding) {
+            throw new NotFoundException("Il n'y a  pas de building");
+        }
     }
 
 

@@ -76,3 +76,8 @@ site vente en ligne = mango
 # gotta put database ip address because we tryna connect to it not me  -> .env
 # double validation not null (bd) & require (class validator) 
 # enregistrer le schema dans les modules = buildingschema
+
+# modélisation des donnees
+- mongodb != typeOrm
+- penser aux requetes avant la conception
+- référence si pas encore idée sur les types de requetres quon va faire -> au sinon imbriquée
